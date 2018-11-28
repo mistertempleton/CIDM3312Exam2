@@ -1,0 +1,33 @@
+@model CIDM3312Exam2.Models.MathOperation
+
+<!-- <p>@ViewData["Message"]</p> -->
+<h1>Let's Do Some Calculating</h1>
+
+<!-- Bootstrap Form -->
+<form asp-controller="Math" asp-action="ShowCalculationResults" class="form-horizontial" method="POST">
+      <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>Numero Uno</label>
+      <input asp-for="@Model.LeftOperand" type="number1" class="form-control" id="left" placeholder="Numero Uno">
+    </div>
+    <div class="form-group col-md-6">
+      <label>Numero Dos</label>
+      <input asp-for="@Model.RightOperand" type="number2" class="form-control" id="right" placeholder="Numero Dos">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="Selection">Operator</label>
+      <select asp-for="@Model.Operator" id="inputState" class="form-control">
+        <option selected>Select one of the following</option>
+        <option>Add </option>
+        <option>Subtract</option>
+        <option>Multiply</option>
+        <option>Divide</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+  </div>
+  <button type="submit" class="btn btn-primary">Calculate</button>
+</form>
